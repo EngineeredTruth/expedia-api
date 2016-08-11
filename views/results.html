@@ -1,0 +1,29 @@
+<header>
+
+  <div class='results-header'>
+    <hr class='white-line' />
+    <h1 class='results-title'>{{title}}</h1>
+    <hr class='white-line' />
+  </div>
+</header>
+<main class='content-wrapper'>
+    <filter-d></filter-d>
+
+    <div ng-show="show===1" class='thumb-wrapper' ng-repeat='event in info | eventFilter:priceInfo | filter: filter'>
+        <div class='thumb-wall'>
+            <a ui-sref='map({latLng : event.latLng, title: event.title, price: event.fromPrice, score: event.recommendationScore, thumbUrl:event.imageUrl})'>
+                <img class='thumbnail' ng-src="{{event.imageUrl}}" alt="" /></a>
+        </div>
+        <div class='event-text'>
+            <h3 class='event-title'>{{event.title}}</h3>
+            <h4 class='event-price'>{{event.fromPrice | currency:'$':0}}</h4>
+        </div>
+    </div>
+    <section class='results-map-container'>
+        <div id="map"></div>
+    </section>
+</main>
+<!-- <section class='results-map-container-container'> -->
+
+<!-- </section> -->
+<home-bar></home-bar>

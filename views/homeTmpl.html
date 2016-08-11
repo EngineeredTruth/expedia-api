@@ -1,0 +1,12 @@
+
+<div class=hero-container>
+<!-- <img class='hero-banner' src="imgs/hero.jpeg" alt="" /> -->
+<form ng-submit = "search()">
+<input type='text' class='search-bar main-search' ng-model=userSearch ng-click=clear() ng-keydown=clearKeydown() autofocus/>
+
+<input type="submit" style="visibility: hidden;" />
+<!-- <a ui-sref="results({id: userSearch })"> -->
+  <input ng-click='search()' type='submit' class='search-button' value='Fly'>
+<!-- </a> -->
+</form>
+</div>

@@ -1,0 +1,19 @@
+<main class='map-container'>
+    <section class='event-container-map'>
+        <div class='event-card-map'>
+            <h3 class='event-title-map'> {{title}} </h3>
+            <h4 class='event-price'> {{price | currency:'$':0}} </h4>
+            <h5>Recommendation Score: {{score}}</h5>
+        </div>
+
+        <img class='event-thumb-map' ng-src="{{thumbUrl}}" alt="Thing to do thumbnail" />
+    </section>
+    <div id="map"></div>
+    <!-- <section class='map-solo-container-container'>
+        <div class='map-solo-container'>
+
+        </div>
+    </section> -->
+</main>
+<home-bar></home-bar>
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-hbqlc65Umbc13oRLE5tE9SOs8mPGyhs&callback=initMap" async defer></script> -->
