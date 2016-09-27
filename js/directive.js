@@ -2,7 +2,7 @@ angular.module('app')
     .directive('filterD', function() {
         return {
             restrict: 'E',
-            templateUrl: '../templates/filter-d.html',
+            templateUrl: './templates/filter-d.html',
             controller: function($scope) {
                 $scope.x = 'x';
             }
@@ -12,13 +12,13 @@ angular.module('app')
     .directive('homeBar', function() {
         return {
             restrict: 'E',
-            templateUrl: '../templates/home-bar.html',
+            templateUrl: './templates/home-bar.html',
             link: function(scope, element, attribute) {
                 $('.home-bar').click(function() {
                     console.log('Butters');
                     $('.results-header').show();
                     $('#butters').attr('src', 'imgs/Butters.JPG');
-                    $('.results-header').css('background', 'URL("../imgs/Butters.JPG")');
+                    $('.results-header').css('background', 'URL("./imgs/Butters.JPG")');
                     $('.results-header').css('background-size', 'cover');
                     $('.results-title').text('');
                     $('.white-line').hide();

@@ -4,12 +4,12 @@ angular.module('app', ['ui.router'])
         $stateProvider
             .state('home', {
                 url: '/:error',
-                templateUrl: '../views/homeTmpl.html',
+                templateUrl: './views/homeTmpl.html',
                 controller: 'MainCtrl'
             })
             .state('results', {
                 url: '/results/:id?startDate?endDate',
-                templateUrl: '../views/results.html',
+                templateUrl: './views/results.html',
                 controller: "ResultsCtrl",
                 resolve: {
                     promiseObj2: ["$http", "$stateParams", function($http, $stateParams) {
@@ -27,7 +27,7 @@ angular.module('app', ['ui.router'])
             })
             .state('map', {
               url: '/map/:latLng?title?price?score?thumbUrl',
-              templateUrl: "../views/map.html",
+              templateUrl: "./views/map.html",
               controller:'MapCtrl'
             });
 
