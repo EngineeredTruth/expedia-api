@@ -2,7 +2,7 @@ angular.module('app')
     .controller('ResultsCtrl', function($scope, promiseObj2, $stateParams, priceService, mapService, $state) {
 
         var x = promiseObj2;
-
+        console.log(x);
         if (x === undefined) {
             $state.go('home', {})
             alert("Expedia doesn't have things to do at that location :'(");
